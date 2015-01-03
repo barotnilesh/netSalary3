@@ -32,7 +32,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         if totalSalary == 0.0 || totalSalary <= 7748.0 {
             grossSalaryTextField.text = "No NI or TAX to pay"
             
-        } else if totalSalary > 7748.0 && totalSalary < 9440.0 {
+        } else if totalSalary > 7748.0 && totalSalary <= 9440.0 {
             
             var nI: Double = (t1.nICalculation(totalSalary))
             var ni: String = "\(t1.nICalculation(totalSalary))"
@@ -42,7 +42,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
             yourTakeHomeField.text = takehome
             grossSalaryTextField.text = "No TAX to pay"
         
-        } else if totalSalary > 9440.0 && totalSalary < 41451.0 {
+        } else if totalSalary > 9440.0 && totalSalary <= 41450.0 {
         var totalSalary = (grossSalaryTextField.text as NSString).doubleValue
         personalAllowanceTextField.text = "\(t1.noTaxable)"
         var grossSalaryText : String = "\(t1.taxOnSalary(totalSalary))"
@@ -68,7 +68,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         yourTakeHomeField.text = takehome
             
         }
-        else if totalSalary > 41451.0 {
+        else if totalSalary >= 41451.0 {
             grossSalaryTextField.text = "Salary out of range!!"
         }
     }

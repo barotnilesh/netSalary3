@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Key in your annual salary" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jHW-65-ulf">
-                                <rect key="frame" x="69" y="81" width="182" height="30"/>
+                                <rect key="frame" x="16" y="80" width="182" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -58,26 +58,15 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RML-dq-hva">
-                                <rect key="frame" x="186" y="396" width="91" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="headTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RML-dq-hva">
+                                <rect key="frame" x="213" y="80" width="91" height="30"/>
                                 <color key="backgroundColor" red="0.29940177670000001" green="0.40126719109999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Submit">
-                                    <color key="titleColor" red="0.7154549326587224" green="0.87815718006092125" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" red="0.98071493789503261" green="1" blue="0.93507447634720464" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="submitButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="F1D-8N-xPE"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PrJ-xw-pe9">
-                                <rect key="frame" x="16" y="396" width="126" height="30"/>
-                                <color key="backgroundColor" red="1" green="0.86260226240660365" blue="0.36585697137769246" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Clear All ?">
-                                    <color key="titleColor" red="1" green="0.17661672959999999" blue="0.01402999716" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="clearAllButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="SEx-Rl-4hb"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="NI Contribution :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vxl-xS-ckj">
@@ -98,7 +87,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Year 2013 - 2014 | Salary upto  £41450.0" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yFl-Ke-92w">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Year 2013 - 2014 | Salary From 9440.0 To  £41450.0" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yFl-Ke-92w">
                                 <rect key="frame" x="16" y="52" width="288" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -121,6 +110,17 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PrJ-xw-pe9">
+                                <rect key="frame" x="97" y="387" width="126" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.86260226240660365" blue="0.36585697137769246" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Clear All ?">
+                                    <color key="titleColor" red="1" green="0.17661672959999999" blue="0.01402999716" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="clearAllButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="SEx-Rl-4hb"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.99627456856453933" blue="0.71004863739820923" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -138,7 +138,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="104" y="185"/>
+            <point key="canvasLocation" x="186" y="247"/>
         </scene>
     </scenes>
 </document>
