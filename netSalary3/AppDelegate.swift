@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  netSalary3
 //
-//  Created by nilebaro on 31/12/2014.
+//  Created by Nilesh Barot on 31/12/2014.
 //  Copyright (c) 2014 itvolunteersuk. All rights reserved.
 //
 

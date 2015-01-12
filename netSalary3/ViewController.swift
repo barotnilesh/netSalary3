@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  netSalary3
 //
-//  Created by nilebaro on 31/12/2014.
+//  Created by Nilesh Barot on 31/12/2014.
 //  Copyright (c) 2014 itvolunteersuk. All rights reserved.
 //
 
@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController, UITextFieldDelegate {
 
+    @IBOutlet weak var taxYearTextField: UITextField!
+    
     @IBOutlet weak var grossSalaryTextField: UITextField! = nil
     
     @IBOutlet weak var personalAllowanceTextField: UITextField!
@@ -26,52 +28,63 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func submitButton(sender: UIButton) {
     
-        
+        var curYear = (taxYearTextField.text as NSString)
         var totalSalary = (grossSalaryTextField.text as NSString).doubleValue
-        var t1 = NetSalary()
-        if totalSalary == 0.0 || totalSalary <= 7748.0 {
-            grossSalaryTextField.text = "No NI or TAX to pay"
+        if totalSalary <= 0.0 {
+            grossSalaryTextField.text = "Key in correct Salary"
+        } else if totalSalary > 0.0 {
+                if curYear == "2012-2013" {
+ 
+                        var yr201213 = Year20122013()
+                        personalAllowanceTextField.text = "8105.00"
+                        var taxableSalary = (yr201213.taxOnSalary(totalSalary))
+                        var x :Double = ("\(taxableSalary)" as NSString).doubleValue
+                        taxableSalaryTextField.text = ("\(x)")
+                        var Tax:Double = (yr201213.taxCalculation(x))
+                        annualTaxField.text = "\(Tax)"
+                        var nII = yr201213.nICalculation(totalSalary)
+                        niTextField.text = "\(nII)"
+                        var totalDiduction: Double = Tax + nII
+                        totalDiductionField.text = "\(totalDiduction)"
+                        var totalTakeHome: Double = totalSalary - totalDiduction
+                        yourTakeHomeField.text = "\(totalTakeHome)"
+                    
+                } else if curYear == "2013-2014" {
+                        var yr201314 = Year20132014()
+                        personalAllowanceTextField.text = "9440.00"
+                        var taxableSalary = (yr201314.taxOnSalary(totalSalary))
+                        var x :Double = ("\(taxableSalary)" as NSString).doubleValue
+                        taxableSalaryTextField.text = ("\(x)")
+                        var Tax:Double = (yr201314.taxCalculation(x))
+                        annualTaxField.text = "\(Tax)"
+                        var nII = yr201314.nICalculation(totalSalary)
+                        niTextField.text = "\(nII)"
+                        var totalDiduction: Double = Tax + nII
+                        totalDiductionField.text = "\(totalDiduction)"
+                        var totalTakeHome: Double = totalSalary - totalDiduction
+                        yourTakeHomeField.text = "\(totalTakeHome)"
             
-        } else if totalSalary > 7748.0 && totalSalary <= 9440.0 {
-            
-            var nI: Double = (t1.nICalculation(totalSalary))
-            var ni: String = "\(t1.nICalculation(totalSalary))"
-            niTextField.text = ni
-            var takehome: String = "\(totalSalary - nI )"
-            
-            yourTakeHomeField.text = takehome
-            grossSalaryTextField.text = "No TAX to pay"
-        
-        } else if totalSalary > 9440.0 && totalSalary <= 41450.0 {
-        var totalSalary = (grossSalaryTextField.text as NSString).doubleValue
-        personalAllowanceTextField.text = "\(t1.noTaxable)"
-        var grossSalaryText : String = "\(t1.taxOnSalary(totalSalary))"
-        
-        taxableSalaryTextField.text = grossSalaryText
-        
-        var taxableSalaryDouble = (taxableSalaryTextField.text as NSString).doubleValue
-        var aT: Double = (t1.taxCalculation(taxableSalaryDouble))
-        var annualTax: String = "\(t1.taxCalculation(taxableSalaryDouble))"
-        
-        annualTaxField.text = annualTax
-        var nI: Double = (t1.nICalculation(totalSalary))
-        var ni: String = "\(t1.nICalculation(totalSalary))"
-        
-        niTextField.text = ni
-        
-        var tD: Double = aT + nI
-        var totalDiductions : String = "\(tD)"
-        totalDiductionField.text = totalDiductions
-        
-        var takehome: String = "\(totalSalary - tD)"
-        
-        yourTakeHomeField.text = takehome
-            
-        }
-        else if totalSalary >= 41451.0 {
-            grossSalaryTextField.text = "Salary out of range!!"
-        }
+                } else if curYear == "2014-2015" {
+
+                        var yr201415 = Year20142015()
+                        personalAllowanceTextField.text = "10000.00"
+                        var taxableSalary = (yr201415.taxOnSalary(totalSalary))
+                        var x :Double = ("\(taxableSalary)" as NSString).doubleValue
+                        taxableSalaryTextField.text = ("\(x)")
+                        var Tax:Double = (yr201415.taxCalculation(x))
+                        annualTaxField.text = "\(Tax)"
+                        var nII = yr201415.nICalculation(totalSalary)
+                        niTextField.text = "\(nII)"
+                        var totalDiduction: Double = Tax + nII
+                        totalDiductionField.text = "\(totalDiduction)"
+                        var totalTakeHome: Double = totalSalary - totalDiduction
+                        yourTakeHomeField.text = "\(totalTakeHome)"
+                    }
+                } else {
+                    taxYearTextField.text = "Enter correct tax year"
+                }
     }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -91,9 +104,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
         // Dispose of any resources that can be recreated.
     }
 
-
     @IBAction func clearAllButton(sender: UIButton) {
         
+        taxYearTextField.text = ""
         grossSalaryTextField.text = ""
         personalAllowanceTextField.text = ""
         taxableSalaryTextField.text = ""

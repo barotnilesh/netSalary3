@@ -14,6 +14,8 @@
 		060AB27A1A545041005DAF6E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 060AB2781A545041005DAF6E /* LaunchScreen.xib */; };
 		060AB2861A545041005DAF6E /* netSalary3Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 060AB2851A545041005DAF6E /* netSalary3Tests.swift */; };
 		060AB2931A546053005DAF6E /* netSalary3Formula.swift in Sources */ = {isa = PBXBuildFile; fileRef = 060AB2921A546053005DAF6E /* netSalary3Formula.swift */; };
+		0632D4FA1A63BB7800057FA0 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0632D4F91A63BB7800057FA0 /* Default-568h@2x.png */; };
+		06E3B8871A63D9FE00EF4D74 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 060AB2841A545041005DAF6E /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,7 +30,6 @@
 
 /* Begin PBXFileReference section */
 		060AB26A1A545041005DAF6E /* netSalary3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = netSalary3.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		060AB26E1A545041005DAF6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		060AB26F1A545041005DAF6E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		060AB2711A545041005DAF6E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		060AB2741A545041005DAF6E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -38,6 +39,7 @@
 		060AB2841A545041005DAF6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		060AB2851A545041005DAF6E /* netSalary3Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = netSalary3Tests.swift; sourceTree = "<group>"; };
 		060AB2921A546053005DAF6E /* netSalary3Formula.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = netSalary3Formula.swift; sourceTree = "<group>"; };
+		0632D4F91A63BB7800057FA0 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 		060AB2611A545041005DAF6E = {
 			isa = PBXGroup;
 			children = (
+				0632D4F91A63BB7800057FA0 /* Default-568h@2x.png */,
 				060AB26C1A545041005DAF6E /* netSalary3 */,
 				060AB2821A545041005DAF6E /* netSalary3Tests */,
 				060AB26B1A545041005DAF6E /* Products */,
@@ -93,7 +96,6 @@
 		060AB26D1A545041005DAF6E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				060AB26E1A545041005DAF6E /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -197,7 +199,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				060AB2751A545041005DAF6E /* Main.storyboard in Resources */,
+				0632D4FA1A63BB7800057FA0 /* Default-568h@2x.png in Resources */,
 				060AB27A1A545041005DAF6E /* LaunchScreen.xib in Resources */,
+				06E3B8871A63D9FE00EF4D74 /* Info.plist in Resources */,
 				060AB2771A545041005DAF6E /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -343,7 +347,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				INFOPLIST_FILE = netSalary3/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/netSalary3Tests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -357,7 +362,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				INFOPLIST_FILE = netSalary3/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/netSalary3Tests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
